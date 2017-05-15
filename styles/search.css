@@ -1,0 +1,58 @@
+body{
+  background: rgb(53, 83, 107);
+  font-family: Century Gothic;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+#search-form{
+  color: white;
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+input{
+  position: relative;
+  top: -30px;
+  border: none;
+  outline:none;
+  background: rgb(74, 120, 145);
+  color: white;
+  font-family: Century Gothic;
+  font-size: 15px;
+}
+
+.sbtn{
+  cursor: pointer;
+}
+
+.text-input, .search-btn{
+  width: 200px;
+  height: 30px;
+  border: 1px solid rgb(243, 206, 213);
+  border-radius: 20px;
+  display: inline-block;
+  background: rgb(74, 120, 145);
+}
+
+.text-input:hover, .search-btn:hover {
+  cursor: pointer;
+  background: rgb(132, 110, 114);
+}
+
+.search-btn:hover input{
+ cursor: pointer;
+ background: rgb(132, 110, 114);
+}
+
+.text-input:hover input{
+ cursor: pointer;
+ border-bottom: 1px solid rgb(152, 130, 134);
+ background: rgb(132, 110, 114);
+}
+
+.search-btn{
+  margin-left: 10px;
+  width: 80px;
+}
