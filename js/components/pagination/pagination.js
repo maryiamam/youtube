@@ -23,19 +23,22 @@ function pagination(getNextItems, updateItems){
     var parentElem = document.getElementById('pagination-container');
     parentElem.innerHTML = '';
     var left = document.createElement('a');
-    left.innerHTML = '<-';
+    left.setAttribute('class', 'fa fa-arrow-left');
     left.setAttribute('onclick', 'pageLeft()');
     var pageNumber = document.createElement('span');
-    pageNumber.innerHTML = page;
+    pageNumber.innerHTML = '&nbsp;' + page + '&nbsp;';
     pageNumber.setAttribute('id', 'page-number');
     var right = document.createElement('a');
-    right.innerHTML = '->';
+    right.setAttribute('class', 'fa fa-arrow-right');
     right.setAttribute('onclick', 'pageRight()');
-    var totalPagesNumber = document.createElement('span');
-    totalPagesNumber.innerHTML = totalResults;
+    var ofPages = document.createElement('div');
+    ofPages.innerHTML = 'of';
+    var totalPagesNumber = document.createElement('div');
+    totalPagesNumber.innerHTML = '&nbsp;' + Math.floor(totalResults / itemsPerPage);
     parentElem.appendChild(left);
     parentElem.appendChild(pageNumber);
     parentElem.appendChild(right);
+    parentElem.appendChild(ofPages);
     parentElem.appendChild(totalPagesNumber);
 
     pageLeft = function(){
@@ -46,7 +49,7 @@ function pagination(getNextItems, updateItems){
         var itemsToShow = items.slice((page - 1)*itemsPerPage, page *itemsPerPage);
         updateItems(itemsToShow);
         var pageNumberElem = document.getElementById('page-number');
-        pageNumberElem.innerHTML = page;
+        pageNumberElem.innerHTML = '&nbsp;' + page + '&nbsp;';
       }
     }
 
@@ -80,7 +83,7 @@ function pagination(getNextItems, updateItems){
         var itemsToShow = items.slice((page - 1)*itemsPerPage, page*itemsPerPage);
         updateItems(itemsToShow);
         var pageNumberElem = document.getElementById('page-number');
-        pageNumberElem.innerHTML = page;
+        pageNumberElem.innerHTML = '&nbsp;' + page + '&nbsp;';
       }
     }
 
