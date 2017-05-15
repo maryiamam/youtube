@@ -1,0 +1,13 @@
+#pagination-container {
+  width: 130px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin:-18px auto;
+}
+
+#pagination-container div{
+  font-size: 15px;
+  color: rgb(229, 229, 241);
+}
