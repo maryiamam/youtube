@@ -68,7 +68,6 @@ function youtubeItem(){
     parentElem.innerHTML = '';
     items.forEach(that.addItem);
   }
-
 }
 
 module.exports = youtubeItem;
