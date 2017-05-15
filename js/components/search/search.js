@@ -92,6 +92,8 @@ function search(){
       if (inputForm.value == ''){
         var container = document.getElementById('youtube-items-container');
         container.innerHTML = '<p>Input your request!</p>';
+        var paginationContainer = document.getElementById('pagination-container');
+        paginationContainer.innerHTML = '';
       }
       else{
 
@@ -110,6 +112,8 @@ function search(){
           if (response.items.length == 0){
             var container = document.getElementById('youtube-items-container');
             container.innerHTML = '<p>Nothing found!</p>';
+            var paginationContainer = document.getElementById('pagination-container');
+            paginationContainer.innerHTML = '';
           }
           else{
             ids = that.collectIds(response);
@@ -139,7 +143,6 @@ function search(){
 
 	  }
   }
-
 }
 
 module.exports = search;
